@@ -1,0 +1,18 @@
+@use "../base/index" as *;
+
+.lectures {
+  background: $purple-secondary;
+  height: 537px;
+  padding: 25px 16px;
+  color: $purple-secondary--light;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  .evidencija-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+}

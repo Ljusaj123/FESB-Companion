@@ -47,6 +47,9 @@ svg {
   color: #e2dff2;
   font-size: 24px;
 }
+svg:active {
+  color: #01fbab;
+}
 
 header {
   background-color: #262141;

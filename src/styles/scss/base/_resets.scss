@@ -44,4 +44,9 @@ img {
 svg {
   color: $purple-secondary--light;
   font-size: $fs-24;
+
+  &:active {
+    //prominit da kad se dode na tu stranicu
+    color: $green-primary;
+  }
 }

@@ -47,7 +47,7 @@ function Login() {
         <button className="btn btn-color" type="submit" onClick={() => login()}>
           Prijavi se
         </button>
-        <span>Pomoć</span>
+        <span onClick={() => alert("Pomozi si sam/sama")}>Pomoć</span>
       </div>
     </div>
   );

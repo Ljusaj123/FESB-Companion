@@ -1,1 +1,76 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  max-width: 375px;
+  width: 90%;
+  margin: 0 auto;
+  border: 2px solid black;
+  height: 800px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 20px;
+  color: #e2dff2;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+h3 {
+  font-size: 12px;
+}
+
+img {
+  max-width: 100%;
+}
+
+svg {
+  color: #e2dff2;
+  font-size: 24px;
+}
+
+header {
+  background-color: #262141;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 27px;
+}
+header .icon-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 32px;
+}
+header .icon-holder > svg {
+  cursor: pointer;
+}

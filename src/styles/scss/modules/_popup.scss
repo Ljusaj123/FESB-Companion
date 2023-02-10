@@ -1,0 +1,21 @@
+.popup {
+  position: absolute;
+  background-color: rosybrown;
+  border-radius: 0 35px 0 35px;
+  padding: 28px 22px;
+  max-width: 239px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  top: 50%;
+  left: 20%;
+
+  & > .uppercase {
+    text-align: center;
+  }
+
+  .buttons-holder {
+    display: flex;
+    justify-content: space-between;
+  }
+}

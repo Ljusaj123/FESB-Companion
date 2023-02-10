@@ -13,7 +13,11 @@ $FESB-green: #64dd16;
 $FESB-red: #ff5353;
 $FESB-blue: #28b6f6;
 
-$green-gradient: linear-gradient(135deg, #2aa39e 0%, #02f9aa 100%);
+$green-gradient: -webkit-linear-gradient(
+  135deg,
+  rgba(42, 163, 158, 1) 0%,
+  rgba(2, 249, 170, 1) 100%
+);
 $green-primary: #01fbab;
 
 $white: #fdfdfd;

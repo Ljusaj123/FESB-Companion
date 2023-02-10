@@ -37,6 +37,11 @@ h3 {
   font-size: $fs-12;
 }
 
+.uppercase {
+  text-transform: uppercase;
+  font-weight: $fw_bold;
+}
+
 img {
   max-width: 100%;
 }

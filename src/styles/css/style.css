@@ -50,7 +50,6 @@ svg {
 
 header {
   background-color: #262141;
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -72,5 +71,21 @@ header .icon-holder {
   gap: 32px;
 }
 header .icon-holder > svg {
+  cursor: pointer;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #262141;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0;
+}
+footer > svg {
   cursor: pointer;
 }

@@ -16,7 +16,11 @@ body {
   width: 90%;
   margin: 0 auto;
   border: 2px solid black;
-  height: 800px;
+  height: 667px;
+  margin-top: 20px;
+}
+body .App {
+  height: 667px;
 }
 
 h1,
@@ -37,6 +41,10 @@ h2 {
 
 h3 {
   font-size: 12px;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 img {
@@ -90,5 +98,244 @@ footer {
   padding: 20px 0;
 }
 footer > svg {
+  cursor: pointer;
+}
+
+.popup {
+  position: absolute;
+  background-color: rosybrown;
+  border-radius: 0 35px 0 35px;
+  padding: 28px 22px;
+  max-width: 239px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 22px;
+  top: 50%;
+  left: 20%;
+}
+.popup > .uppercase {
+  text-align: center;
+}
+.popup .buttons-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.lectures {
+  background: #2e2951;
+  height: 537px;
+  padding: 25px 16px;
+  color: #e2dff2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+}
+.lectures .evidencija-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 6px 14px;
+  color: #2e2951;
+  font-size: 12px;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+.btn:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.btn-empty {
+  border: solid 1px transparent;
+  background-image: -webkit-linear-gradient(135deg, rgb(42, 163, 158) 0%, rgb(2, 249, 170) 100%);
+  background-origin: border-box;
+  -webkit-box-shadow: 2px 1000px 1px #fff inset;
+          box-shadow: 2px 1000px 1px #fff inset;
+}
+
+.btn-color {
+  background: -webkit-linear-gradient(135deg, rgb(42, 163, 158) 0%, rgb(2, 249, 170) 100%);
+}
+
+.lecture {
+  background-color: #262141;
+  padding: 15px 20px 15px 30px;
+  position: relative;
+}
+.lecture .type {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 100%;
+}
+.lecture .color-red {
+  background-color: #ff5353;
+}
+.lecture .color-blue {
+  background-color: #28b6f6;
+}
+.lecture .color-green {
+  background-color: #64dd16;
+}
+
+input {
+  outline: none;
+  padding: 15px 20px 15px 42px;
+  background: none;
+  border-radius: 8px;
+  border: solid 1px #01fbab;
+  color: #fdfdfd;
+}
+input::-webkit-input-placeholder {
+  color: #fdfdfd;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+input::-moz-placeholder {
+  color: #fdfdfd;
+  -moz-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+input:-ms-input-placeholder {
+  color: #fdfdfd;
+  -ms-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+input::-ms-input-placeholder {
+  color: #fdfdfd;
+  -ms-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+input::placeholder {
+  color: #fdfdfd;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+input:focus::-webkit-input-placeholder {
+  opacity: 0.2;
+}
+input:focus::-moz-placeholder {
+  opacity: 0.2;
+}
+input:focus:-ms-input-placeholder {
+  opacity: 0.2;
+}
+input:focus::-ms-input-placeholder {
+  opacity: 0.2;
+}
+input:focus::placeholder {
+  opacity: 0.2;
+}
+
+.login {
+  background-color: #2e2951;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+  padding: 49px 28px;
+}
+.login .icon-holder {
+  text-align: center;
+  height: 40%;
+}
+.login .icon-holder > svg {
+  font-size: 150px;
+  color: #01fbab;
+}
+.login .input-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+.login .input-holder .username,
+.login .input-holder .password {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.login .input-holder .icon {
+  height: 32px;
+  width: 28px;
+  color: #fdfdfd;
+  padding: 4px;
+  position: absolute;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  top: 50%;
+  left: 15px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.login .button-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 12px;
+  margin-top: 53px;
+}
+.login .button-holder > button {
+  width: 190px;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  padding: 17px 50px;
+  border-radius: 50px;
+}
+.login .button-holder span {
+  color: #fdfdfd;
   cursor: pointer;
 }

@@ -1,0 +1,25 @@
+@use "../base/index" as *;
+
+.lecture {
+  background-color: $purple-secondary--dark;
+  padding: 15px 20px 15px 30px;
+  position: relative;
+
+  .type {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 100%;
+  }
+  .color-red {
+    background-color: $FESB-red;
+  }
+
+  .color-blue {
+    background-color: $FESB-blue;
+  }
+  .color-green {
+    background-color: $FESB-green;
+  }
+}

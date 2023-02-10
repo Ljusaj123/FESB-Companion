@@ -3,6 +3,7 @@ import Home from "./pages/home/Home";
 import Calendar from "./pages/calendar/Calendar";
 import Presence from "./pages/presence/Presence";
 import NotFound from "./pages/NotFound";
+import Login from "./pages/login/Login";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/calendar" element={<Calendar />} />
           <Route path="/presence" element={<Presence />} />
+          <Route path="/login" element={<Login />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

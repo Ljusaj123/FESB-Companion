@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { FaFacebookF } from "react-icons/fa";
 import { BiUser, BiShareAlt } from "react-icons/bi";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
+  const navigate = useNavigate();
+
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -11,6 +14,7 @@ function Login() {
       alert("you need to enter username and password");
     } else {
       alert("You are loged in");
+      navigate("/");
       setUsername("");
       setPassword("");
     }

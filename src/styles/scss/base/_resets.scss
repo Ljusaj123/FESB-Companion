@@ -11,16 +11,15 @@
 body {
   font-family: $ff_Inter;
   font-weight: $fw_normal;
-  max-width: 375px;
-  width: 90%;
-  margin: 0 auto;
-  border: 2px solid black;
-  height: 667px;
-  margin-top: 20px;
+}
 
-  .App {
-    height: 667px;
-  }
+.App {
+  height: 667px;
+  width: 375px;
+  margin: 0 auto;
+  margin-top: 20px;
+  border: 2px solid black;
+  position: relative;
 }
 
 h1,
@@ -37,9 +36,12 @@ h1 {
 }
 h2 {
   font-size: $fs-16;
+  @extend .uppercase;
 }
 h3 {
   font-size: $fs-12;
+  color: $purple-secondary--darker;
+  @extend .uppercase;
 }
 
 .uppercase {
@@ -48,14 +50,4 @@ h3 {
 
 img {
   max-width: 100%;
-}
-
-svg {
-  color: $purple-secondary--light;
-  font-size: $fs-24;
-
-  &:active {
-    //prominit da kad se dode na tu stranicu
-    color: $green-primary;
-  }
 }

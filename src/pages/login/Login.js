@@ -21,13 +21,11 @@ function Login() {
   };
   return (
     <div className="login">
-      <div className="icon-holder">
-        <FaFacebookF />
-      </div>
+      <FaFacebookF className="icon-logo" />
 
-      <div className="input-holder">
+      <form className="form">
         <div className="username">
-          <BiUser className="icon" />
+          <BiUser className="input-icon" />
           <input
             type="text"
             placeholder="FESB korisnički račun"
@@ -37,7 +35,7 @@ function Login() {
         </div>
 
         <div className="password">
-          <BiShareAlt className="icon" />
+          <BiShareAlt className="input-icon" />
           <input
             type="password"
             placeholder="Lozinka"
@@ -45,13 +43,17 @@ function Login() {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-      </div>
+      </form>
 
       <div className="button-holder">
-        <button className="btn btn-color" type="submit" onClick={() => login()}>
+        <button
+          className="btn btn-color btn-login"
+          type="submit"
+          onClick={() => login()}
+        >
           Prijavi se
         </button>
-        <span onClick={() => alert("Pomozi si sam/sama")}>Pomoć</span>
+        <p className="help-text">Pomoć</p>
       </div>
     </div>
   );

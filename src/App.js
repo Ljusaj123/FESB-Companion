@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Calendar from "./pages/calendar/Calendar";
 import Presence from "./pages/presence/Presence";
-import NotFound from "./pages/NotFound";
+import NotFound from "./pages/notfound/NotFound";
 import Login from "./pages/login/Login";
 
 function App() {

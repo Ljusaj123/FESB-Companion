@@ -12,15 +12,15 @@
 body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  max-width: 375px;
-  width: 90%;
-  margin: 0 auto;
-  border: 2px solid black;
-  height: 667px;
-  margin-top: 20px;
 }
-body .App {
+
+.App {
   height: 667px;
+  width: 375px;
+  margin: 0 auto;
+  margin-top: 20px;
+  border: 2px solid black;
+  position: relative;
 }
 
 h1,
@@ -41,22 +41,15 @@ h2 {
 
 h3 {
   font-size: 12px;
+  color: #a9a5be;
 }
 
-.uppercase {
+.uppercase, h2, h3 {
   text-transform: uppercase;
 }
 
 img {
   max-width: 100%;
-}
-
-svg {
-  color: #e2dff2;
-  font-size: 24px;
-}
-svg:active {
-  color: #01fbab;
 }
 
 header {
@@ -101,9 +94,28 @@ footer > svg {
   cursor: pointer;
 }
 
-.popup {
+.popup-holder {
+  background: transparent;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  height: 100%;
+  width: 100%;
   position: absolute;
-  background-color: rosybrown;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.popup-holder .popup {
+  background-color: #fdfdfd;
+  color: #262141;
   border-radius: 0 35px 0 35px;
   padding: 28px 22px;
   max-width: 239px;
@@ -115,13 +127,8 @@ footer > svg {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 22px;
-  top: 50%;
-  left: 20%;
 }
-.popup > .uppercase {
-  text-align: center;
-}
-.popup .buttons-holder {
+.popup-holder .popup .buttons-holder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -132,9 +139,9 @@ footer > svg {
 
 .lectures {
   background: #2e2951;
+  color: #e2dff2;
   height: 537px;
   padding: 25px 16px;
-  color: #e2dff2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -144,7 +151,7 @@ footer > svg {
           flex-direction: column;
   gap: 15px;
 }
-.lectures .evidencija-text {
+.lectures .text-holder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -155,16 +162,23 @@ footer > svg {
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
+  margin-bottom: 10px;
+}
+.lectures .active {
+  color: #01fbab;
+  text-decoration: underline;
 }
 
 .btn {
   background: none;
   border: none;
-  cursor: pointer;
   border-radius: 10px;
-  padding: 6px 14px;
+  cursor: pointer;
+  padding: 0.7rem 1rem;
   color: #2e2951;
   font-size: 12px;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
   -webkit-transition: -webkit-transform 0.5s ease;
   transition: -webkit-transform 0.5s ease;
   transition: transform 0.5s ease;
@@ -173,6 +187,24 @@ footer > svg {
 .btn:active {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
+}
+
+.btn--no-style {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  text-align: left;
+}
+
+.btn-login {
+  width: 190px;
+  font-size: 20px;
+  padding: 17px 50px;
+  border-radius: 50px;
 }
 
 .btn-empty {
@@ -191,6 +223,19 @@ footer > svg {
   background-color: #262141;
   padding: 15px 20px 15px 30px;
   position: relative;
+  cursor: pointer;
+  -webkit-transition: -webkit-box-shadow, -webkit-transform 0.3s ease;
+  transition: -webkit-box-shadow, -webkit-transform 0.3s ease;
+  transition: box-shadow, transform 0.3s ease;
+  transition: box-shadow, transform 0.3s ease, -webkit-box-shadow, -webkit-transform 0.3s ease;
+}
+.lecture:hover {
+  -webkit-box-shadow: 2px 2px 2px 1px rgba(252, 252, 252, 0.123);
+          box-shadow: 2px 2px 2px 1px rgba(252, 252, 252, 0.123);
+}
+.lecture:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
 }
 .lecture .type {
   position: absolute;
@@ -258,49 +303,21 @@ input:focus::placeholder {
   opacity: 0.2;
 }
 
-.login {
-  background-color: #2e2951;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 30px;
-  padding: 49px 28px;
+svg {
+  color: #e2dff2;
+  font-size: 24px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
-.login .icon-holder {
-  text-align: center;
-  height: 40%;
+svg:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
 }
-.login .icon-holder > svg {
-  font-size: 150px;
+svg.active {
   color: #01fbab;
 }
-.login .input-holder {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 16px;
-}
-.login .input-holder .username,
-.login .input-holder .password {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-.login .input-holder .icon {
+
+.input-icon {
   height: 32px;
   width: 28px;
   color: #fdfdfd;
@@ -312,6 +329,49 @@ input:focus::placeholder {
   left: 15px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+.icon-logo {
+  font-size: 110px;
+  color: #01fbab;
+  height: 35%;
+  margin: 0 auto;
+}
+
+.login {
+  background-color: #2e2951;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 70px;
+  padding: 45px 28px;
+  color: #fdfdfd;
+}
+.login .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+.login .form .username,
+.login .form .password {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .login .button-holder {
   display: -webkit-box;
@@ -325,17 +385,28 @@ input:focus::placeholder {
       -ms-flex-align: center;
           align-items: center;
   gap: 12px;
-  margin-top: 53px;
 }
-.login .button-holder > button {
-  width: 190px;
-  font-size: 20px;
-  font-weight: 700;
-  font-family: "Inter", sans-serif;
-  padding: 17px 50px;
-  border-radius: 50px;
+
+.not-found {
+  background: #2e2951;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  gap: 20px;
+  padding: 0 10px;
 }
-.login .button-holder span {
-  color: #fdfdfd;
-  cursor: pointer;
+.not-found .btn-color {
+  font-size: 16px;
 }

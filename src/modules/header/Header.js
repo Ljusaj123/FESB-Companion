@@ -1,14 +1,36 @@
-import React from "react";
-
+import React, { useEffect, useState } from "react";
 import { TbSettings } from "react-icons/tb";
 import { AiOutlineReload } from "react-icons/ai";
 
 function Header() {
+  const pathname = window.location.pathname;
+  const [headingText, setHeadingText] = useState("");
+  const [isHomePage, setIsHomePage] = useState(false);
+
+  useEffect(() => {
+    switch (pathname) {
+      case "/":
+        setHeadingText("FESB Companion");
+        setIsHomePage(true);
+        break;
+      case "/calendar":
+        setHeadingText("Raspored");
+        setIsHomePage(false);
+        break;
+      case "/presence":
+        setHeadingText("Presence");
+        setIsHomePage(false);
+        break;
+      default:
+        setHeadingText("");
+        setIsHomePage(false);
+    }
+  }, [pathname]);
   return (
     <header>
-      <h1>FESB Companion</h1>
+      <h1>{headingText}</h1>
       <div className="icon-holder">
-        <AiOutlineReload />
+        {isHomePage ? <AiOutlineReload /> : ""}
         <TbSettings />
       </div>
     </header>

@@ -386,6 +386,11 @@ svg.active {
           align-items: center;
   gap: 12px;
 }
+.login .error-message {
+  color: #ff5353;
+  font-size: 10px;
+  text-align: center;
+}
 
 .not-found {
   background: #2e2951;

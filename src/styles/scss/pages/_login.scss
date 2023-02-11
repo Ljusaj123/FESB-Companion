@@ -28,4 +28,10 @@
     align-items: center;
     gap: 12px;
   }
+
+  .error-message {
+    color: $FESB-red;
+    font-size: 10px;
+    text-align: center;
+  }
 }

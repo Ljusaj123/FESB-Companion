@@ -2,22 +2,37 @@ import React, { useState } from "react";
 import { FaFacebookF } from "react-icons/fa";
 import { BiUser, BiShareAlt } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function Login() {
   const navigate = useNavigate();
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const login = () => {
-    if (!username || !password) {
-      alert("you need to enter username and password");
-    } else {
-      alert("You are loged in");
-      navigate("/");
-      setUsername("");
-      setPassword("");
-    }
+    axios
+      .post("http://localhost:4200/login", {
+        FESB_korisnicki_racun: username,
+        Lozinka: password,
+      })
+      .then((response) => {
+        console.log(response.data.accessToken);
+        navigate("/", {
+          state: {
+            accessToken: response.data.accessToken,
+          },
+        });
+      })
+      .catch((error) => {
+        setErrorMessage(error.response.data.error);
+        setTimeout(() => {
+          setErrorMessage("");
+        }, 3000);
+      });
+    setUsername("");
+    setPassword("");
   };
   return (
     <div className="login">
@@ -43,8 +58,8 @@ function Login() {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
+        <span className="error-message">{errorMessage}</span>
       </form>
-
       <div className="button-holder">
         <button
           className="btn btn-color btn-login"

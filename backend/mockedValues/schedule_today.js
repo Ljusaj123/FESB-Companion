@@ -60,7 +60,7 @@ let schedule = [
     ],
   },
   {
-    id: 3,
+    id_studenta: 3,
     kolegiji: [
       {
         code: "MU1",
@@ -89,7 +89,7 @@ let schedule = [
     ],
   },
   {
-    id: 4,
+    id_studenta: 4,
     kolegiji: [
       {
         code: "PMRIL1",
@@ -110,25 +110,8 @@ let schedule = [
     ],
   },
   {
-    id: 5,
-    kolegiji: [
-      {
-        code: "MULT1",
-        name: "multimedijski sustavi",
-        classroom: "A101",
-        time: "17:00-19:00",
-        type: "labovi",
-        presence: true,
-      },
-      {
-        code: "PP2",
-        name: "Paralelno programiranje",
-        classroom: "B526",
-        time: "12:00-13:30",
-        type: "labovi",
-        presence: true,
-      },
-    ],
+    id_studenta: 5,
+    kolegiji: [],
   },
 ];
 

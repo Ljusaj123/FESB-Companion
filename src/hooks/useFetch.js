@@ -32,27 +32,6 @@ const useFetch = (url, accessToken) => {
 
     fetch();
   }, [accessToken, url]);
-
-  const reFetch = async () => {
-    setLoading(true);
-    try {
-      const response = await axios.get(url, {
-        headers: {
-           Authorization: accessToken,
-           }
-          });
-      setData(response.data.todaySchedule.kolegiji);
-      console.log("data");
-    } catch (error) {
-      console.log(error)
-      setError({
-        isError: true,
-        message: error.message,
-      });
-    } finally {
-      setLoading(false);
-    }
-  };
-  return { data, loading, error, reFetch };
+  return { data, loading, error };
 };
 export default useFetch;

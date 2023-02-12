@@ -82,7 +82,6 @@ export default function Lectures() {
 
   return (
     <div className="lectures">
-      {console.log(filtrirano)}
       <h2 className="text-holder">
         <button className="btn--no-style" onClick={() => handleEvidentirano()}>
           <h2 className={activeEvidentirano ? "active" : ""}>Evidentirano</h2>

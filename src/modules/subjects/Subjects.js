@@ -52,7 +52,7 @@ function Subjects() {
       <div className="week">
         {week.map((w, index) => {
           return (
-            <div className='day' onClick={(e) => setClassActive(e)} id={w}><p className='text-center' key={index} >{w + " " + (index + 15)}</p></div>
+            <div className='day' onClick={(e) => setClassActive(e)} id={w} key={index}><p className='text-center'  >{w + " " + (index + 15)}</p></div>
           )
 
         })}

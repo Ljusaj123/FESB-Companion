@@ -33,9 +33,9 @@ function Footer() {
 
   return (
     <footer>
-      <BiHomeAlt id="home" class="icons-navigate" onClick={() => navigate("/home")} />
-      <GoCalendar id="calendar" class="icons-navigate" onClick={() => navigate("/calendar")} />
-      <FiClock id="presence" class="icons-navigate" onClick={() => navigate("/presence")} />
+      <BiHomeAlt id="home" className="icons-navigate" onClick={() => navigate("/home")} />
+      <GoCalendar id="calendar" className="icons-navigate" onClick={() => navigate("/calendar")} />
+      <FiClock id="presence" className="icons-navigate" onClick={() => navigate("/presence")} />
     </footer>
   );
 }

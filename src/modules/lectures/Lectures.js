@@ -3,6 +3,9 @@ import Lecture from "../../components/lecture/Lecture";
 import Popup from "../popup/Popup";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
+import useFetch from "../../hooks/useFetch";
+import { HalfMalf } from "react-spinner-animated";
+import "react-spinner-animated/dist/index.css";
 
 export default function Lectures() {
   const location = useLocation();
@@ -10,11 +13,25 @@ export default function Lectures() {
   const { accessToken } = location.state;
 
   const [trigger, setTrigger] = useState(false);
+  const { data, error, loading, reFetch } = useFetch(
+    `http://localhost:4200/scheduletoday`, accessToken
+  );
+
   const [lectures, setLectures] = useState([]);
   const [lecture, setLecture] = useState({});
   const [filtrirano, setFiltrirano] = useState([]);
   const [activeEvidentirano, setActiveEvidentirano] = useState(false);
   const [activeNeevidentirano, setActiveNeevidentirano] = useState(false);
+
+
+  useEffect(()=>{
+    setLectures(data);
+    setFiltrirano(data);
+    setActiveEvidentirano(false);
+    setActiveNeevidentirano(false);
+  }, [data])
+
+
   const handlePresence = async () => {
     await axios.patch("http://localhost:4200/updatescheduletoday", lecture, {
       headers: {
@@ -22,6 +39,7 @@ export default function Lectures() {
       },
     });
     setTrigger(false);
+    reFetch(); //nekad radi nekad ne
   };
 
   const handleNeevidentirano = () => {
@@ -47,27 +65,18 @@ export default function Lectures() {
     setActiveNeevidentirano(false);
   };
 
-  useEffect(() => {
-    async function FetchSchedule() {
-      await axios
-        .get("http://localhost:4200/scheduletoday", {
-          headers: {
-            Authorization: accessToken,
-          },
-        })
-        .then((response) => {
-          setLectures(response.data.todaySchedule.kolegiji);
-          setFiltrirano(response.data.todaySchedule.kolegiji);
-        });
-    }
-
-    FetchSchedule();
-  }, [accessToken]);
-
   const handleClick = (lecture) => {
     setTrigger(true);
     setLecture(lecture);
   };
+
+   if (loading) {
+    return <HalfMalf text={"Loading..."} width={"100px"} height={"100px"} bgColor={"#2e2951"}/>;
+  }
+  
+  // if (error.isError) {
+  //   return <p>{error.message}</p>;
+  // }
 
   return (
     <div className="lectures">

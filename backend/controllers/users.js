@@ -86,15 +86,37 @@ class UserController {
         try {
             const id = req.user.id;
 
-            const todaySchedule = await UserServices.findTodaysScheduleByStudentId(id);
+            const scheduleById = await UserServices.findTodaysScheduleByStudentId(id);
 
-            if(!todaySchedule) {
+            if(!scheduleById) {
                 return res.status(401).json({
                     error: "Student not found",
                 })
             }
+
+            const schedule = scheduleById.kolegiji;
             return res.status(200).send({
-                todaySchedule,
+                schedule,
+              });
+        } catch (error) {
+            console.error(error);
+        }
+    } 
+    static async scheduleWeek (req, res) {
+        try {
+            const id = req.user.id;
+
+            const scheduleById = await UserServices.findWeekScheduleByStudentId(id);
+
+            if(!scheduleById) {
+                return res.status(401).json({
+                    error: "Student not found",
+                })
+            }
+
+            const schedule = scheduleById.kolegiji;
+            return res.status(200).send({
+                schedule,
               });
         } catch (error) {
             console.error(error);

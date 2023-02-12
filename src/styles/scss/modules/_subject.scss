@@ -3,7 +3,10 @@
 .presence-list {
   background: $purple-secondary;
   height: 537px;
+  overflow-y: scroll;
   padding: 25px 16px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 
   .presence-button {
     padding: 16px 36.5px;
@@ -28,4 +31,8 @@
       text-transform: none;
     }
   }
+}
+
+.presence-list::-webkit-scrollbar {
+  display: none;
 }

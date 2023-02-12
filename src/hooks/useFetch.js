@@ -19,7 +19,7 @@ const useFetch = (url, accessToken) => {
            }
           }
         )
-        setData(response.data.todaySchedule.kolegiji);
+        setData(response.data.schedule);
       } catch (error) {
         setError({
           isError: true,

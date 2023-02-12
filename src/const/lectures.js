@@ -73,3 +73,153 @@ export const schedule = [
 //   grid_sustavi: 1,
 // },
 // ];
+
+export const subjects = [
+  {
+    id: 1,
+    name: "Poslovni informacijski sustavi",
+  },
+  {
+    id: 2,
+    name: "Paralelno programiranje",
+  },
+  {
+    id: 3,
+    name: "Medicinski elektronički uređaji",
+  },
+  {
+    id: 4,
+    name: "Multimedijski sustavi",
+  },
+  {
+    id: 5,
+    name: "Ugradbeni računalni sustavi",
+  },
+  {
+    id: 6,
+    name: "Grid računalni sustavi",
+  },
+];
+
+export const presence = [
+  {
+    id: 1,
+    subjectId: 1,
+    type: "Predavanja",
+    present: 4,
+    notPresent: 5,
+    haventHappendYet() {
+      return 13 - (this.present + this.notPresent);
+    },
+  },
+  {
+    id: 2,
+    subjectId: 1,
+    type: "Laboratorijske Vježbe",
+    present: 6,
+    notPresent: 1,
+    haventHappendYet() {
+      return 13 - (this.present + this.notPresent);
+    },
+  },
+  {
+    id: 3,
+    subjectId: 2,
+    type: "Predavanja",
+    present: 4,
+    notPresent: 5,
+    haventHappendYet() {
+      return 13 - (this.present + this.notPresent);
+    },
+  },
+  {
+    id: 4,
+    subjectId: 2,
+    type: "Laboratorijske Vježbe",
+    present: 6,
+    notPresent: 1,
+    haventHappendYet() {
+      return 13 - (this.present + this.notPresent);
+    },
+  },
+  {
+    id: 5,
+    subjectId: 3,
+    type: "Predavanja",
+    present: 4,
+    notPresent: 5,
+    haventHappendYet() {
+      return 13 - (this.present + this.notPresent);
+    },
+  },
+  {
+    id: 6,
+    subjectId: 3,
+    type: "Laboratorijske Vježbe",
+    present: 6,
+    notPresent: 1,
+    haventHappendYet() {
+      return 13 - (this.present + this.notPresent);
+    },
+  },
+  {
+    id: 7,
+    subjectId: 4,
+    type: "Predavanja",
+    present: 4,
+    notPresent: 5,
+    haventHappendYet() {
+      return 13 - (this.present + this.notPresent);
+    },
+  },
+  {
+    id: 8,
+    subjectId: 4,
+    type: "Laboratorijske Vježbe",
+    present: 6,
+    notPresent: 1,
+    haventHappendYet() {
+      return 13 - (this.present + this.notPresent);
+    },
+  },
+  {
+    id: 9,
+    subjectId: 5,
+    type: "Predavanja",
+    present: 4,
+    notPresent: 5,
+    haventHappendYet() {
+      return 13 - (this.present + this.notPresent);
+    },
+  },
+  {
+    id: 10,
+    subjectId: 6,
+    type: "Predavanja",
+    present: 6,
+    notPresent: 1,
+    haventHappendYet() {
+      return 13 - (this.present + this.notPresent);
+    },
+  },
+  {
+    id: 11,
+    subjectId: 6,
+    type: "Auditorne Vježbe",
+    present: 4,
+    notPresent: 5,
+    haventHappendYet() {
+      return 13 - (this.present + this.notPresent);
+    },
+  },
+  {
+    id: 12,
+    subjectId: 6,
+    type: "Laboratorijske Vježbe",
+    present: 6,
+    notPresent: 1,
+    haventHappendYet() {
+      return 13 - (this.present + this.notPresent);
+    },
+  },
+];

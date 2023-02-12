@@ -169,6 +169,30 @@ footer > svg {
   text-decoration: underline;
 }
 
+.list {
+  background: #2e2951;
+  height: 537px;
+  padding: 25px 16px;
+}
+.list .list-title-container {
+  border-bottom: 1px solid #01fbab;
+}
+.list .list-title-container .list-title {
+  color: #01fbab;
+  margin-bottom: 4px;
+}
+.list .list-content-container {
+  padding: 16px 0px;
+  border-bottom: 0.3px solid #01fbab;
+}
+.list .list-content-container .list-content {
+  text-transform: none;
+  cursor: pointer;
+}
+.list .list-content-container .list-content:hover {
+  color: #01fbab;
+}
+
 .btn {
   background: none;
   border: none;

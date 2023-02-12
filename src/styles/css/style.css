@@ -42,6 +42,7 @@ h2 {
 
 .h2-bold {
   font-weight: 700;
+  color: #262141;
 }
 
 h3 {
@@ -251,10 +252,6 @@ footer > svg {
   border-radius: 10px;
 }
 
-.calendar {
-  border-radius: 20px 0 20px 0;
-}
-
 .btn {
   background: none;
   border: none;
@@ -437,8 +434,6 @@ svg.active {
 .subject-info .name {
   padding: 10px;
   border-top-right-radius: 30px;
-}
-.subject-info .name > h2 {
   font-weight: 800;
 }
 .subject-info .info {

@@ -18,7 +18,11 @@ function Header() {
         setIsHomePage(false);
         break;
       case "/presence":
-        setHeadingText("Presence");
+        setHeadingText("Prisutnost");
+        setIsHomePage(false);
+        break;
+      case "/presence/:id":
+        setHeadingText("Prisutnost");
         setIsHomePage(false);
         break;
       default:

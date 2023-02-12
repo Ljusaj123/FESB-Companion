@@ -193,6 +193,38 @@ footer > svg {
   color: #01fbab;
 }
 
+.presence-list {
+  background: #2e2951;
+  height: 537px;
+  padding: 25px 16px;
+}
+.presence-list .presence-button {
+  padding: 16px 36.5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0px auto 20px;
+}
+.presence-list .presence-button .presence-button-text {
+  margin-left: 8px;
+}
+.presence-list .presence-list-title-container {
+  border-bottom: 1px solid #01fbab;
+  margin-bottom: 20px;
+}
+.presence-list .presence-list-title-container .presence-list-title {
+  color: #01fbab;
+  font-weight: 700;
+  margin-bottom: 4px;
+  text-transform: none;
+}
+
 .btn {
   background: none;
   border: none;
@@ -360,6 +392,48 @@ svg.active {
   color: #01fbab;
   height: 35%;
   margin: 0 auto;
+}
+
+.statistic {
+  padding: 0px 26px;
+}
+.statistic .subject-container {
+  background-color: #262141;
+  -webkit-box-shadow: -1.43704px 1.43704px 17.2444px rgba(0, 0, 0, 0.06), -1.43704px 1.43704px 1.43704px rgba(0, 0, 0, 0.02), 0px 1.43704px 5.74815px rgba(0, 0, 0, 0.02);
+          box-shadow: -1.43704px 1.43704px 17.2444px rgba(0, 0, 0, 0.06), -1.43704px 1.43704px 1.43704px rgba(0, 0, 0, 0.02), 0px 1.43704px 5.74815px rgba(0, 0, 0, 0.02);
+  border-radius: 14.3704px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 17px;
+}
+.statistic .subject-container .subject-type {
+  text-transform: none;
+  color: #e2dff2;
+  font-size: 14.3704px;
+  line-height: 29px;
+  margin: 9px 0px 6px;
+}
+.statistic .subject-container .presence-number {
+  font-size: 28.7407px;
+  line-height: 29px;
+  color: #e2dff2;
+  opacity: 1 !important;
+  margin-right: 3.5px;
+}
+.statistic .subject-container .subject-presence {
+  font-size: 14.3704px;
+  line-height: 29px;
+  color: #e2dff2;
+  opacity: 0.3;
+  margin-bottom: 24.4px;
 }
 
 .login {

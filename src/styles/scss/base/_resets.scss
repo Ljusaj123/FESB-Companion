@@ -37,6 +37,7 @@ h1 {
 h2 {
   font-size: $fs-16;
   @extend .uppercase;
+  color: $purple-secondary--light;
 }
 
 .h2-bold {
@@ -47,6 +48,14 @@ h3 {
   font-size: $fs-12;
   color: $purple-secondary--darker;
   @extend .uppercase;
+}
+
+p{
+  font-size: $fs-12;
+}
+
+.capitalize{
+  text-transform: capitalize;
 }
 
 .uppercase {

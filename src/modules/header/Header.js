@@ -11,7 +11,7 @@ function Header() {
 
   useEffect(() => {
     switch (pathname) {
-      case "/":
+      case "/home":
         setHeadingText("FESB Companion");
         setIsHomePage(true);
         break;

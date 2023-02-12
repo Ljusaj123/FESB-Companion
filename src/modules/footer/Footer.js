@@ -8,7 +8,7 @@ function Footer() {
   const navigate = useNavigate();
   return (
     <footer>
-      <BiHomeAlt onClick={() => navigate("/")} />
+      <BiHomeAlt onClick={() => navigate("/home")} />
       <GoCalendar onClick={() => navigate("/calendar")} />
       <FiClock onClick={() => navigate("/presence")} />
     </footer>

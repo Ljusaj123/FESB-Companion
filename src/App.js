@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Calendar from "./pages/calendar/Calendar";
 import Presence from "./pages/presence/Presence";
@@ -11,7 +11,10 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/"
+            element={<Navigate to="/login" />}
+          />
+          <Route path="/home" element={<Home />} />
           <Route path="/calendar" element={<Calendar />} />
           <Route path="/presence" element={<Presence />} />
           <Route path="/presence/:id" element={<SubjectPresence />} />

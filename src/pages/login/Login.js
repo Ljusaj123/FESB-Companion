@@ -20,7 +20,7 @@ function Login() {
       .then((response) => {
         window.localStorage.setItem("token", response.data.accessToken);
         console.log(response.data.accessToken);
-        navigate("/");
+        navigate("/home");
       })
       .catch((error) => {
         setErrorMessage(error.response.data.error);

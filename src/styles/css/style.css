@@ -429,19 +429,19 @@ svg.active {
   line-height: 29px;
   margin: 9px 0px 6px;
 }
-.statistic .subject-container .presence-number {
-  font-size: 28.7407px;
-  line-height: 29px;
-  color: #e2dff2;
-  opacity: 1 !important;
-  margin-right: 3.5px;
-}
 .statistic .subject-container .subject-presence {
   font-size: 14.3704px;
   line-height: 29px;
   color: #e2dff2;
   opacity: 0.3;
   margin-bottom: 24.4px;
+}
+.statistic .subject-container .presence-number {
+  font-size: 28.7407px;
+  line-height: 29px;
+  color: #e2dff2;
+  opacity: 1 !important;
+  margin-right: 3.5px;
 }
 .statistic .subject-container .doughnut {
   margin-bottom: 34px;

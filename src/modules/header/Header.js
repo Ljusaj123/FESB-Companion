@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { TbSettings } from "react-icons/tb";
 import { AiOutlineReload } from "react-icons/ai";
 
@@ -6,6 +7,7 @@ function Header() {
   const pathname = window.location.pathname;
   const [headingText, setHeadingText] = useState("");
   const [isHomePage, setIsHomePage] = useState(false);
+  const { id } = useParams();
 
   useEffect(() => {
     switch (pathname) {
@@ -18,14 +20,18 @@ function Header() {
         setIsHomePage(false);
         break;
       case "/presence":
-        setHeadingText("Presence");
+        setHeadingText("Prisutnost");
+        setIsHomePage(false);
+        break;
+      case `/presence/${id}`:
+        setHeadingText("Prisutnost");
         setIsHomePage(false);
         break;
       default:
         setHeadingText("");
         setIsHomePage(false);
     }
-  }, [pathname]);
+  }, [id, pathname]);
   return (
     <header>
       <h1>{headingText}</h1>

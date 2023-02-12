@@ -38,10 +38,14 @@ function Subjects() {
         setDay(sch[day]);
       }
     })
-    if (loading) {
+  }
+
+   if (loading) {
       return <HalfMalf text={"Loading..."} width={"100px"} height={"100px"} bgColor={"#2e2951"} />;
     }
-
+  
+  if (error.isError) {
+    return <p>{error.message}</p>;
   }
   return (
     <div className='subjects'>

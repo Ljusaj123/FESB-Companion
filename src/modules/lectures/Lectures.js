@@ -11,22 +11,26 @@ export default function Lectures() {
   const accessToken = window.localStorage.getItem("token");
 
   const [trigger, setTrigger] = useState(false);
-  const { data, error, loading, reFetch } = useFetch(
+  const { data, error, loading} = useFetch(
     `http://localhost:4200/scheduletoday`, accessToken
   );
 
   const [lectures, setLectures] = useState([]);
   const [lecture, setLecture] = useState({});
   const [filtrirano, setFiltrirano] = useState([]);
-  const [activeEvidentirano, setActiveEvidentirano] = useState(false);
+  const [activeEvidentirano, setActiveEvidentirano] = useState(true);
   const [activeNeevidentirano, setActiveNeevidentirano] = useState(false);
 
 
   useEffect(()=>{
     setLectures(data);
-    setFiltrirano(data);
-    setActiveEvidentirano(false);
-    setActiveNeevidentirano(false);
+    setFiltrirano([]);
+
+    data.forEach((lecture) => {
+      if (lecture.presence === true) {
+        setFiltrirano((evid) => [...evid, lecture]);
+      }
+    });
   }, [data])
 
 
@@ -37,7 +41,7 @@ export default function Lectures() {
       },
     });
     setTrigger(false);
-    reFetch(); //nekad radi nekad ne
+    setTimeout(()=>{window.location.reload(true)}, 0);
   };
 
   const handleNeevidentirano = () => {
@@ -72,12 +76,13 @@ export default function Lectures() {
     return <HalfMalf text={"Loading..."} width={"100px"} height={"100px"} bgColor={"#2e2951"}/>;
   }
   
-  // if (error.isError) {
-  //   return <p>{error.message}</p>;
-  // }
+  if (error.isError) {
+    return <p>{error.message}</p>;
+  }
 
   return (
     <div className="lectures">
+      {console.log(filtrirano)}
       <h2 className="text-holder">
         <button className="btn--no-style" onClick={() => handleEvidentirano()}>
           <h2 className={activeEvidentirano ? "active" : ""}>Evidentirano</h2>

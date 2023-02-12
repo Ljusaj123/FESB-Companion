@@ -38,6 +38,11 @@ h2 {
   font-size: $fs-16;
   @extend .uppercase;
 }
+
+.h2-bold {
+  font-weight: $fw-bold;
+}
+
 h3 {
   font-size: $fs-12;
   color: $purple-secondary--darker;

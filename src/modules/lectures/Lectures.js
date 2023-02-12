@@ -15,6 +15,14 @@ export default function Lectures() {
   const [filtrirano, setFiltrirano] = useState([]);
   const [activeEvidentirano, setActiveEvidentirano] = useState(false);
   const [activeNeevidentirano, setActiveNeevidentirano] = useState(false);
+  const handlePresence = async () => {
+    await axios.patch("http://localhost:4200/updatescheduletoday", lecture, {
+      headers: {
+        Authorization: accessToken,
+      },
+    });
+    setTrigger(false);
+  };
 
   const handleNeevidentirano = () => {
     setFiltrirano([]);
@@ -100,7 +108,12 @@ export default function Lectures() {
         </p>
       )}
 
-      <Popup trigger={trigger} setTrigger={setTrigger} lecture={lecture} />
+      <Popup
+        trigger={trigger}
+        setTrigger={setTrigger}
+        lecture={lecture}
+        handlePresence={handlePresence}
+      />
     </div>
   );
 }

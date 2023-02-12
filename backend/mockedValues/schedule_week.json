@@ -1,0 +1,125 @@
+[
+  {
+    "id_studenta": 1,
+    "kolegiji": [
+      {
+        "pon": [
+          {
+            "code": "ME1",
+            "name": "Medicinski i elektronski uređaji",
+            "classroom": "B301",
+            "professor": "Antonio Šarolić",
+            "time": "10:00-12:00",
+            "type": "predavanja",
+            "group": "Nema grupa"
+          },
+          {
+            "code": "PMRIL1",
+            "name": "Programiranje mobilnih robota i letjelica",
+            "classroom": "A246",
+            "professor": "Josip Musić",
+            "time": "16:00-18:00",
+            "type": "predavanja",
+            "group": "Nema grupa"
+          }
+        ]
+      },
+      {
+        "uto": []
+      },
+      {
+        "sri": [
+          {
+            "code": "PMRIL2",
+            "name": "Programiranje mobilnih robota i letjelica",
+            "classroom": "A246",
+            "professor": "Josip Musić",
+            "time": "12:00-13:30",
+            "type": "labovi",
+            "group": "Grupa 1"
+          },
+          {
+            "code": "PP2",
+            "name": "Paralelno programiranje",
+            "classroom": "A101",
+            "professor": "Antonia Ivanda",
+            "time": "14:00-15:30",
+            "type": "labovi",
+            "group": "Grupa 2"
+          },
+          {
+            "code": "GRID1",
+            "name": "grid računalni sustavi",
+            "classroom": "A102",
+            "professor": "Eugen Mudnić",
+            "time": "15:00-17:00",
+            "type": "auditorne",
+            "group": "Nema grupa"
+          }
+        ]
+      },
+      {
+        "cet": [
+          {
+            "code": "PP1",
+            "name": "Paralelno programiranje",
+            "classroom": "A101",
+            "professor": "Damir Krstinić",
+            "time": "16:00-18:00",
+            "type": "predavanja",
+            "group": "Nema grupa"
+          },
+          {
+            "code": "GR1",
+            "name": "grid računalni sustavi",
+            "classroom": "A102",
+            "professor": "Eugen Mudnić",
+            "time": "15:00-16:00",
+            "type": "predavanja",
+            "group": "Nema grupa"
+          }
+        ]
+      },
+      {
+        "pet": [
+          {
+            "code": "MULT1",
+            "name": "multimedijski sustavi",
+            "classroom": "A101",
+            "professor": "Antonio Šarolić",
+            "time": "17:00-19:00",
+            "type": "predavanja",
+            "group": "Nema grupa"
+          },
+          {
+            "code": "MULT1",
+            "name": "multimedijski sustavi",
+            "classroom": "A101",
+            "professor": "Antonio Šarolić",
+            "time": "12:00-13:30",
+            "type": "labovi",
+            "group": "Grupa 1"
+          },
+          {
+            "code": "UGR1",
+            "name": "ugradbeni sustavi",
+            "classroom": "B401",
+            "professor": "Sven Gotovac",
+            "time": "15:00-16:00",
+            "type": "predavanja",
+            "group": "Nema grupa"
+          },
+          {
+            "code": "GR2",
+            "name": "grid računalni sustavi",
+            "classroom": "A102",
+            "professor": "Eugen Mudnić",
+            "time": "15:00-17:00",
+            "type": "auditorne",
+            "group": "Nema grupa"
+          }
+        ]
+      }
+    ]
+  }
+]

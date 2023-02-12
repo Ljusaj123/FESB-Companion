@@ -24,4 +24,12 @@ userRouter.get('/scheduletoday', Authentication.auth, async (req, res) => {
     await UserController.scheduleToday(req, res);
 })
 
+userRouter.get('/scheduleweek', Authentication.auth, async (req, res) => {
+    await UserController.scheduleWeek(req, res);
+})
+
+userRouter.patch('/updatescheduletoday', Authentication.auth, async (req, res) => {
+    await UserController.scheduleTodayUpdate(req, res);
+})
+
 module.exports = userRouter;

@@ -37,15 +37,34 @@ h1 {
 h2 {
   font-size: $fs-16;
   @extend .uppercase;
+  color: $purple-secondary--light;
 }
+
+.h2-bold {
+  font-weight: $fw-bold;
+  color: $purple-secondary--dark;
+}
+
 h3 {
   font-size: $fs-12;
   color: $purple-secondary--darker;
   @extend .uppercase;
 }
 
+p{
+  font-size: $fs-12;
+}
+
+.capitalize{
+  text-transform: capitalize;
+}
+
 .uppercase {
   text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
 }
 
 img {

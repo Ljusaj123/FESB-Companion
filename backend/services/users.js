@@ -2,6 +2,7 @@ let students = require('../mockedValues/users');
 let presenceTotal = require('../mockedValues/presence_general');
 let presenceToday = require('../mockedValues/presence_today');
 let scheduleToday = require('../mockedValues/schedule_today');
+let scheduleWeek = require('../mockedValues/schedule_week');
 
 class UserServices {
     static async findStudent(FESB_korisnicki_racun) {
@@ -48,6 +49,16 @@ class UserServices {
         try {
             let schedule = scheduleToday.find(schedule => schedule.id_studenta === id);
             return schedule;
+
+        } catch (error) {
+            console.error(error);
+          }
+    }
+    static async findWeekScheduleByStudentId(id) {
+        try {
+            let schedule = scheduleWeek.find(schedule => schedule.id_studenta === id);
+            return schedule;
+
 
         } catch (error) {
             console.error(error);

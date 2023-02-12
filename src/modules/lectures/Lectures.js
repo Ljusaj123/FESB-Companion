@@ -1,16 +1,14 @@
 import React, { useState, useEffect } from "react";
 import Lecture from "../../components/lecture/Lecture";
 import Popup from "../popup/Popup";
-import { useLocation } from "react-router-dom";
 import axios from "axios";
 import useFetch from "../../hooks/useFetch";
 import { HalfMalf } from "react-spinner-animated";
 import "react-spinner-animated/dist/index.css";
 
 export default function Lectures() {
-  const location = useLocation();
 
-  const { accessToken } = location.state;
+  const accessToken = window.localStorage.getItem("token");
 
   const [trigger, setTrigger] = useState(false);
   const { data, error, loading, reFetch } = useFetch(

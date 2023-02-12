@@ -18,12 +18,9 @@ function Login() {
         Lozinka: password,
       })
       .then((response) => {
+        window.localStorage.setItem("token", response.data.accessToken);
         console.log(response.data.accessToken);
-        navigate("/", {
-          state: {
-            accessToken: response.data.accessToken,
-          },
-        });
+        navigate("/");
       })
       .catch((error) => {
         setErrorMessage(error.response.data.error);
